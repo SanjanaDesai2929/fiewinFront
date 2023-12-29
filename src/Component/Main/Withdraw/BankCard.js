@@ -2,7 +2,7 @@ import React, {useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { DeleteAccountDetails, UserAccountDetails } from '../../../redux/action/FetchData'
-import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+
 import arrowLeft from "../../../images/arrowLeft.png"
 import checked from "../../../images/checked.png"
 import rubishIcon from "../../../images/rubishIcon.png"
