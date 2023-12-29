@@ -23,7 +23,7 @@ function App() {
   return (
     <>
 
-      <Router basename="/fiewin2020">
+      <Router >
         {/* Main Routing */}    
         <MainRoute socket={socket} />
         <PrivateRoute socket={socket} />

@@ -2,7 +2,7 @@
   "name": "fiewin",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/fiewin2020/tabIndex/0",
+  "homepage": "/tabIndex/0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -17,7 +17,7 @@
     "npm": "^8.19.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
-    "react-chartjs-2": "^2.11.0",
+    "react-chartjs-2": "^5.2.0",
     "react-collapsed": "^3.4.0",
     "react-countdown": "^2.3.2",
     "react-countup": "^6.3.1",
