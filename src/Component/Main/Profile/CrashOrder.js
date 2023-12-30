@@ -9,7 +9,7 @@ const CrashOrder = () => {
     useEffect(() => {
         const a = async () => {
 
-            var response = await fetch(`https://161.97.146.42:7000/api/crash/user/order/${login_data.userId}`, {
+            var response = await fetch(`http://161.97.146.42:7000/api/crash/user/order/${login_data.userId}`, {
                 method: "POST",
                 headers: {
                     "x-access-token": login_data.token,

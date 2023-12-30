@@ -31,7 +31,7 @@ const CrashAmount = ({ socket, series, status, multiper, userStop }) => {
 
         const WalletAmount = async () => {
 
-            var response = await fetch(`https://161.97.146.42:7000/api/walletAmount/${login_data.userId}`, {
+            var response = await fetch(`http://161.97.146.42:7000/api/walletAmount/${login_data.userId}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',

@@ -51,7 +51,7 @@ const CrashGame = ({ count, status, multip, CrashData, s1 }) => {
     }, [s1])
     useEffect(() => {
 
-        var socket = io.connect("https://161.97.146.42:7000")
+        var socket = io.connect("http://161.97.146.42:7000")
 
 
 

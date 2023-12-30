@@ -28,7 +28,7 @@ const FiewinPage = ({ socket, dispatch, res }) => {
     const getData = async () => {
         try {
             const login_data = JSON.parse(sessionStorage.getItem('login'))
-            var response = await fetch(`https://161.97.146.42:7000/api/homePage`, {
+            var response = await fetch(`http://161.97.146.42:7000/api/homePage`, {
                 headers: {
                     "x-access-token": login_data.token,
                     'Content-Type': 'application/json',
