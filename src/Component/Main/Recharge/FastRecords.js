@@ -1,6 +1,6 @@
 import { data } from 'jquery'
 import React from 'react'
-import Scrollbars from 'react-custom-scrollbars'
+
 import { useNavigate } from 'react-router-dom'
 import help from "../../../images/help.png"
 import icon02 from "../../../images/icon02.png"

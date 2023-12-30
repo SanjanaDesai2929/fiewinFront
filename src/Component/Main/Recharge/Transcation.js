@@ -20,7 +20,7 @@ import { RechargeScreenShotParity, RechargeSDetails, RechargeStatusParity, Recha
 import ContDown from './ContDown'
 import { createWorker } from "tesseract.js";
 import Modal from "react-bootstrap/Modal";
-import { Scrollbars } from "react-custom-scrollbars";
+// import { Scrollbars } from "react-custom-scrollbars";
 import SuccessAlert from './SuccessAlert'
 import swal from 'sweetalert'
 
@@ -255,7 +255,7 @@ const Transcation = ({ dispatch, res, res1, res2, res3 }) => {
 
                                             </div>
                                         </div>
-                                        <Scrollbars>
+                                        {/* <Scrollbars> */}
                                             <div className="css-1dbjc4n" style={{ padding: "22px" }}>
                                                 <div className="css-1dbjc4n" style={{ flexDirection: "row", height: "342px", marginTop: "30px" }}>
                                                     <div className="css-1dbjc4n r-1awozwy r-13awgt0">
@@ -535,7 +535,7 @@ const Transcation = ({ dispatch, res, res1, res2, res3 }) => {
 
 
                                             </div>
-                                        </Scrollbars>
+                                        {/* </Scrollbars> */}
                                     </div>
 
                                 </div>

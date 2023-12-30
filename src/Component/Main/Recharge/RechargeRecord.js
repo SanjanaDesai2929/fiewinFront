@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Scrollbars from 'react-custom-scrollbars';
+
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import FastRecords from './FastRecords';
