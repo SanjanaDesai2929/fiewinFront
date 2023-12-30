@@ -112,7 +112,7 @@ const Recharge = ({ socket, dispatch, res }) => {
 
     const handleSubmit = async () => {
         if (state.recharge_amount > 10) {
-            var response = await fetch(`http://161.97.146.42:7000/api/commodity/trade/buy_r`, {
+            var response = await fetch(`https://161.97.146.42:7000/api/commodity/trade/buy_r`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

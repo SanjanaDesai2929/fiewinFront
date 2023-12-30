@@ -2,7 +2,7 @@
 // REGISTER USER
 export function RegisterParity(data) {
   return async (dispatch) => {
-    var response = await fetch("http://161.97.146.42:7000/api/register", {
+    var response = await fetch("https://161.97.146.42:7000/api/register", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -22,7 +22,7 @@ export function RegisterParity(data) {
 // LOGIN USER
 export function LoginParity(data) {
   return async (dispatch) => {
-    var response = await fetch("http://161.97.146.42:7000/api/login", {
+    var response = await fetch("https://161.97.146.42:7000/api/login", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -48,7 +48,7 @@ export function LoginParity(data) {
 export function WalletAmountParity() {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/walletAmount/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/walletAmount/${login_data.userId}`, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -70,7 +70,7 @@ export function RechargeAmountParity() {
 
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/commodity/trade/order/detail`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/commodity/trade/order/detail`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ export function RechargeAmountParity() {
 export function RechargeTransferredParity(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/commodity/trade/order/tranferred`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/commodity/trade/order/tranferred`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ export function RechargeTransferredParity(data) {
 export function RechargeScreenShotParity(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/upload_img`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/upload_img`, {
       method: "POST",
       headers: {
         // 'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ export function RechargeScreenShotParity(data) {
 export function RechargeStatusParity(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/commodity/trade/order/tranferredStatus`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/commodity/trade/order/tranferredStatus`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -165,7 +165,7 @@ export function RechargeTransactionParity(id) {
 
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/commodity/trade/order/transaction/${id}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/commodity/trade/order/transaction/${id}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',
@@ -190,7 +190,7 @@ export function RechargeUserTransactionParity(id) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
 
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/commodity/trade/order/transactionUser/${id}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/commodity/trade/order/transactionUser/${id}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',
@@ -214,7 +214,7 @@ export function AddAccountDetails(data) {
 
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/withdraw/account/add`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/withdraw/account/add`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -237,7 +237,7 @@ export function AddAccountDetails(data) {
 export function UserAccountDetails(id) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/withdraw/account/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/withdraw/account/${login_data.userId}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',
@@ -260,7 +260,7 @@ export function DeleteAccountDetails(data) {
 
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/withdraw/account/delete`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/withdraw/account/delete`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -289,7 +289,7 @@ export function WithdrawAccountDetails(data) {
 
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/withdraw/account`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/withdraw/account`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -313,7 +313,7 @@ export function WithdrawAccountDataDetails() {
 
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/withdraw/account/data/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/withdraw/account/data/${login_data.userId}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',
@@ -336,7 +336,7 @@ export function WithdrawAccountDataCancelDetails(id) {
 
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/withdraw/account/cancel/${id}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/withdraw/account/cancel/${id}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',
@@ -362,7 +362,7 @@ export function TaskRewardDetails() {
 
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/taskreward/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/taskreward/${login_data.userId}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',
@@ -385,7 +385,7 @@ export function TaskStatusChangeDetails(data) {
 
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/taskreward/status`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/taskreward/status`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -423,7 +423,7 @@ export function CheckInRewardDetails() {
 
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/checkin/info/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/checkin/info/${login_data.userId}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',
@@ -447,7 +447,7 @@ export function CheckInPostRewardDetails(data) {
 
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/checkin/info/reward`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/checkin/info/reward`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -471,7 +471,7 @@ export function CheckInPostRewardDetails(data) {
 export function CheckInBonusRewardDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/checkin/reward`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/checkin/reward`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -492,7 +492,7 @@ export function CheckInBonusRewardDetails(data) {
 export function MyProfileDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/my_account/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/my_account/${login_data.userId}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',
@@ -514,7 +514,7 @@ export function MyProfileDetails(data) {
 export function MyProfileUpdateDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/my_account/modify`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/my_account/modify`, {
       method: "POST",
       headers: {
         "x-access-token": login_data.token
@@ -535,7 +535,7 @@ export function MyProfileUpdateDetails(data) {
 export function ParityOrderDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/userOrder/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/userOrder/${login_data.userId}`, {
       method: "GET",
       headers: {
         "x-access-token": login_data.token
@@ -554,7 +554,7 @@ export function ParityOrderDetails(data) {
 export function FinancialDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/my_account/financial/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/my_account/financial/${login_data.userId}`, {
       method: "GET",
       headers: {
         "x-access-token": login_data.token
@@ -574,7 +574,7 @@ export function FinancialDetails(data) {
 export function InviteDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/balance/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/balance/${login_data.userId}`, {
       method: "GET",
       headers: {
         "x-access-token": login_data.token
@@ -594,7 +594,7 @@ export function InviteDetails(data) {
 export function IncomeDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/incomedetails/${login_data.userId}/${data}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/incomedetails/${login_data.userId}/${data}`, {
       method: "GET",
       headers: {
         "x-access-token": login_data.token
@@ -613,7 +613,7 @@ export function IncomeDetails(data) {
 export function InviteLinkDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/inviteLink/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/inviteLink/${login_data.userId}`, {
       method: "GET",
       headers: {
         "x-access-token": login_data.token
@@ -632,7 +632,7 @@ export function InviteLinkDetails(data) {
 export function InvitePeopleDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/invitePeople/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/invitePeople/${login_data.userId}`, {
       method: "GET",
       headers: {
         "x-access-token": login_data.token
@@ -652,7 +652,7 @@ export function InvitePeopleDetails(data) {
 export function InvitePeopleMobileDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/invitePeopleMobile/${data}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/invitePeopleMobile/${data}`, {
       method: "GET",
 
     });
@@ -670,7 +670,7 @@ export function InvitePeopleMobileDetails(data) {
 export function LuckyrupeesDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/luckyRupees`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/luckyRupees`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -692,7 +692,7 @@ export function LuckyrupeesDetails(data) {
 export function MineSweeperDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/minesweeper/order`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/minesweeper/order`, {
       method: "POST",
       headers: {
         "x-access-token": login_data.token,
@@ -715,7 +715,7 @@ export function MineSweeperDetails(data) {
 export function MineSweeperGetDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/minesweeper/user/order/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/minesweeper/user/order/${login_data.userId}`, {
       method: "GET",
       headers: {
         "x-access-token": login_data.token,
@@ -739,7 +739,7 @@ export function MineSweeperGetDetails(data) {
 export function IncomeGetDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/income/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/income/${login_data.userId}`, {
       method: "GET",
       headers: {
         "x-access-token": login_data.token,
@@ -762,7 +762,7 @@ export function IncomeGetDetails(data) {
 export function RechargeSDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/recharge`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/recharge`, {
       method: "POST",
       headers: {
         "x-access-token": login_data.token,
@@ -785,7 +785,7 @@ export function RechargeSDetails(data) {
 export function RankingDataDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/RankerDetails`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/RankerDetails`, {
 
       headers: {
         "x-access-token": login_data.token,
@@ -809,7 +809,7 @@ export function RankingDataDetails(data) {
 export function ComplaintDataDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/complaint`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/complaint`, {
       method: "POST",
 
       headers: {
@@ -834,7 +834,7 @@ export function ComplaintDataDetails(data) {
 export function GrowthPlanDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/growthDetail/${login_data.userId}`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/growthDetail/${login_data.userId}`, {
 
       headers: {
         "x-access-token": login_data.token,
@@ -857,7 +857,7 @@ export function GrowthPlanDetails(data) {
 export function GrowthPlanStatusDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/growthDetail/status`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/growthDetail/status`, {
       method: "POST",
 
       headers: {
@@ -883,7 +883,7 @@ export function GrowthPlanStatusDetails(data) {
 export function MoreParityDetails() {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/more/fastparity`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/more/fastparity`, {
  
 
       headers: {
@@ -908,7 +908,7 @@ export function MoreParityDetails() {
 export function ProbablityDetails() {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/probability`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/probability`, {
  
 
       headers: {
@@ -933,7 +933,7 @@ export function ProbablityDetails() {
 export function UserOrderDetails(data) {
   const login_data = JSON.parse(sessionStorage.getItem('login'))
   return async (dispatch) => {
-    var response = await fetch(`http://161.97.146.42:7000/api/userOrder/${login_data.userId}/`, {
+    var response = await fetch(`https://161.97.146.42:7000/api/userOrder/${login_data.userId}/`, {
    method:"GET",
       headers: {
         "x-access-token": login_data.token,

@@ -14,7 +14,7 @@ import PrivateRoute from './Routes/PrivateRoute'
 import $ from 'jquery';
 import io from 'socket.io-client';
 
-const socket = io.connect('http://161.97.146.42:7000');
+const socket = io.connect('https://161.97.146.42:7000');
 // socket.on("result",(data)=>{
 //  alert(data)
 // })
@@ -23,7 +23,7 @@ function App() {
   return (
     <>
 
-      <Router >
+      <Router basename="/fiewin2020">
         {/* Main Routing */}    
         <MainRoute socket={socket} />
         <PrivateRoute socket={socket} />
