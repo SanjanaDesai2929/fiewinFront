@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import * as React from 'react'
 
-import "react-minesweeper/lib/minesweeper.css";
-import Minesweeper from "react-minesweeper/lib/dist/Minesweeper"
+// import "react-minesweeper/lib/minesweeper.css";
+// import Minesweeper from "react-minesweeper/lib/dist/Minesweeper"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Eight from './eight';
